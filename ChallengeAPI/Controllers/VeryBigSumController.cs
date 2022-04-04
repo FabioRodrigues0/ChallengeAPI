@@ -1,9 +1,5 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using ChallengeAPI.Data;
-using ChallengeAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace ChallengeAPI.Controllers;
 
@@ -11,37 +7,26 @@ namespace ChallengeAPI.Controllers;
 [Route("[controller]")]
 public class VeryBigSumController : ControllerBase
 {
-	private static VeryBigSum ListInputs;
-	private static decimal finalSum;
-	private readonly DataContext _context;
+	private readonly IVeryBigSumService _veryBigSumService;
 
-	public VeryBigSumController(DataContext context)
+	public VeryBigSumController(IVeryBigSumService veryBigSumService)
 	{
-		_context = context;
+		_veryBigSumService = veryBigSumService;
 	}
 
 	[HttpPost]
 	public async Task<ActionResult<List<int>>> Post([FromBody] List<int> sum)
 	{
-		ListInputs = new VeryBigSum();
-
 		if(!sum.Any())
-			return BadRequest();
-		foreach(var inputs in sum)
-		{
-			finalSum += inputs;
-		}
-		ListInputs.Input = JsonSerializer.Serialize(sum);
-		ListInputs.Output = finalSum.ToString();
-		_context.VeryBigs.Add(ListInputs);
-		await _context.SaveChangesAsync();
-		return Ok(ListInputs);
+			return BadRequest("Tem que inserir pelo menos um numero");
+		await _veryBigSumService.AddVeryBigSum(sum);
+		return Ok("Dados inseridos com sucesso");
 	}
 
 	[HttpGet]
 	public async Task<ActionResult<VeryBigSum>> Get()
 	{
-		var response = await _context.VeryBigs.OrderByDescending(p => p.DateTime).ToListAsync();
-		return Ok(response);
+		var result = await _veryBigSumService.GetVeryBigSum();
+		return Ok(result);
 	}
 }

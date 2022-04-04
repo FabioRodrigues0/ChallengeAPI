@@ -1,4 +1,8 @@
-using ChallengeAPI.Data;
+global using ChallengeAPI.Data;
+global using ChallengeAPI.Models;
+global using ChallengeAPI.Services.DiagonalSumService;
+global using ChallengeAPI.Services.RatioSumService;
+global using ChallengeAPI.Services.VeryBigSumService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +16,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IRatioSumService, RatioSumService>();
+builder.Services.AddScoped<IVeryBigSumService, VeryBigSumService>();
+builder.Services.AddScoped<IDiagonalSumService, DiagonalSumService>();
 
 var app = builder.Build();
 

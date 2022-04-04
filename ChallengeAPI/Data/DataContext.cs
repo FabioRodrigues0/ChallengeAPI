@@ -1,5 +1,4 @@
-﻿using ChallengeAPI.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace ChallengeAPI.Data;
 

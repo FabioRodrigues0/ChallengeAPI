@@ -5,8 +5,8 @@ namespace ChallengeAPI.Models;
 
 public class RatioSum
 {
-	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 	[Key]
+	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 	public Guid Id { get; set; }
 
 	public string Input { get; set; } = string.Empty;
