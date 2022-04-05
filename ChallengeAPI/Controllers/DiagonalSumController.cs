@@ -26,6 +26,8 @@ public class DiagonalSumController : ControllerBase
 	public async Task<ActionResult<DiagonalSum>> Get()
 	{
 		var result = await _diagonalSumService.GetDiagonalSum();
+		if(result.Count() == 0)
+			return Ok("Não contem dados");
 		return Ok(result);
 	}
 }

@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "6556d690-d693-4a60-9cd6-54bb5941ef9a",
+		"name": "ChallengeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Diagonal Sum",
+			"item": [
+				{
+					"name": "OK",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    postman.setEnvironmentVariable(\"num\", pm.variables.replaceIn('{{$randomFirstName}}'));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t[\n\t\t32,\n\t\t65,\n\t\t670\n\t],\n\t[\n\t\t1,\n\t\t-328,\n\t\t5\n\t],\n\t[\n\t\t4,\n\t\t5,\n\t\t9\n\t]\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/DiagonalSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"DiagonalSum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  [\n    47879153,\n    47374268\n  ],\n  [\n    26266633,\n    38350033\n  ]\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/DiagonalSum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"DiagonalSum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Post C/ Letras",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    postman.setEnvironmentVariable(\"num\", pm.variables.replaceIn('{{$randomFirstName}}'));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t[\n\t\t32,\n\t\t65,\n\t\t\"a\"\n\t],\n\t[\n\t\t1,\n\t\t-328,\n\t\t5\n\t],\n\t[\n\t\t4,\n\t\t5,\n\t\t9\n\t]\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/DiagonalSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"DiagonalSum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  [\n    47879153,\n    47374268\n  ],\n  [\n    26266633,\n    38350033\n  ]\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/DiagonalSum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"DiagonalSum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Post Vazio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/DiagonalSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"DiagonalSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/DiagonalSum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/DiagonalSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"DiagonalSum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/DiagonalSum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"DiagonalSum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Very Big Sum",
+			"item": [
+				{
+					"name": "OK",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t1,\n\t3,\n\t5,\n\t7,\n\t9\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/VeryBigSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VeryBigSum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  18096276,\n  -16251034\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/VeryBigSum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"VeryBigSum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Post Vazio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/VeryBigSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VeryBigSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post C/ Letras",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t\"a\",\r\n\t9,\r\n\t0,\r\n\t0\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/VeryBigSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VeryBigSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/VeryBigSum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/VeryBigSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VeryBigSum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/VeryBigSum",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"VeryBigSum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RatioSum",
+			"item": [
+				{
+					"name": "OK",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t1,\r\n\t1,\r\n\t0,\r\n\t-1,\r\n\t-1\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/RatioSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"RatioSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post C/ Letras",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t1,\r\n\t1,\r\n\t0,\r\n\t\"a\",\r\n\t-1\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/RatioSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"RatioSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Vazio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/VeryBigSum",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"VeryBigSum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/RatioSum",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7178",
+			"type": "string"
+		},
+		{
+			"key": "RandomNumber",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

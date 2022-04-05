@@ -27,6 +27,8 @@ public class VeryBigSumController : ControllerBase
 	public async Task<ActionResult<VeryBigSum>> Get()
 	{
 		var result = await _veryBigSumService.GetVeryBigSum();
+		if(result.Count() == 0)
+			return Ok("Não contem dados");
 		return Ok(result);
 	}
 }

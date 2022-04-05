@@ -26,6 +26,8 @@ public class RatioSumController : ControllerBase
 	public async Task<ActionResult<RatioSum>> Get()
 	{
 		var result = await _ratioSumService.GetRatioSum();
+		if(result.Count() == 0)
+			return Ok("Não contem dados");
 		return Ok(result);
 	}
 }
